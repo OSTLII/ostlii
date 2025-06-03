@@ -174,6 +174,27 @@
 
     button[type="submit"]:hover { opacity: 0.9; }
 
+/* Polished form card */
+.contact form {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 500px;
+  margin: auto;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--olive);
+  box-shadow: 0 0 0 2px rgba(155,158,127,0.2);
+}
+
+::placeholder {
+  color: #888;
+}
+
     /* Footer */
     footer {
       background: var(--ink);
