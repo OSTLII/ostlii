@@ -3,360 +3,279 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ostlii – Human‑First Real‑World Discovery</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Ostlii – Strategic AI Agency & Ecosystem Operator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
   <style>
     :root {
-      /* Brand palette (sampled from ostlii.com) */
-      --olive: #9b9e7f;
-      --sand: #f3efd3;
-      --ink: #30332c;
+      --green: #95b07f;
+      --ink: #303332;
+      --sand: #f3f3d3;
+      --gold: #c6a664;
       --white: #ffffff;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       line-height: 1.6;
       color: var(--ink);
       background: var(--white);
     }
 
-    a {
+    header {
+      background: linear-gradient(135deg, var(--green) 0%, var(--sand) 100%);
       color: var(--ink);
-      text-decorati
-        on: none;
-      font-weight: 600;
-    }
-
-/* Navbar */
-.navbar {
-  background: var(--sand);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.navbar .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1rem;
-}
-
-.logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--ink);
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: var(--ink);
-  font-weight: 600;
-}
-
-    /* Hero */
-    .hero {
-      background: var(--olive);
-      color: var(--white);
-      padding: 6rem 1rem;
+      padding: 4rem 1rem 6rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
       margin-bottom: 1rem;
-      font-weight: 700;
     }
 
-    .hero p {
-      font-size: clamp(1rem, 2.5vw, 1.4rem);
-      max-width: 700px;
+    header p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      max-width: 60ch;
       margin: 0 auto 2rem;
     }
 
-    .btn-primary {
-      background: var(--sand);
-      color: var(--ink);
-      padding: 0.9rem 2rem;
-      border-radius: 4px;
-      display: inline-block;
-      transition: opacity 0.25s ease;
-    }
-
-    .btn-primary:hover { opacity: 0.85; }
-
-    /* Features */
-    .features {
-      display: grid;
-      gap: 2rem;
-      padding: 4rem 1rem;
-      max-width: 1100px;
-      margin: auto;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .feature {
-      background: var(--sand);
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .feature h3 { margin-bottom: 0.75rem; }
-
-    /* About & Values */
-    .about {
-      padding: 4rem 1rem;
-      background: var(--white);
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .about h2 { text-align: center; margin-bottom: 2rem; }
-    .about p { margin-bottom: 1rem; }
-
-    /* Coming Soon */
-    .coming-soon {
-      background: var(--olive);
-      color: var(--white);
-      padding: 4rem 1rem;
-      text-align: center;
-    }
-
-    .coming-soon h2 { margin-bottom: 1rem; }
-
-    /* Contact */
-    .contact {
-      padding: 4rem 1rem;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    form {
-      display: grid;
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1rem;
     }
 
-    input, textarea {
-      padding: 0.75rem 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-      font-family: inherit;
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.25s ease;
     }
 
-    button[type="submit"] {
-      background: var(--olive);
+    .btn-primary {
+      background: var(--ink);
       color: var(--white);
-      border: none;
-      padding: 0.9rem 2rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+    }
+    .btn-primary:hover {
+      background: var(--gold);
+      color: var(--ink);
     }
 
-    button[type="submit"]:hover { opacity: 0.9; }
+    .btn-outline {
+      border: 2px solid var(--ink);
+      color: var(--ink);
+    }
+    .btn-outline:hover {
+      background: var(--ink);
+      color: var(--white);
+    }
 
-/* Polished form card */
-.contact form {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  max-width: 500px;
-  margin: auto;
-}
+    section {
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--olive);
-  box-shadow: 0 0 0 2px rgba(155,158,127,0.2);
-}
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
 
-::placeholder {
-  color: #888;
-}
-/* Fun notice popup */
-.popup {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  background: var(--sand);
-  color: var(--ink);
-  padding: 1rem 1.25rem 1rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  max-width: 260px;
-  font-size: 0.9rem;
-  z-index: 1500;
-  display: none;
-}
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
 
-.popup a {
-  color: var(--olive);
-  font-weight: 600;
-}
+    @media (min-width: 700px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-.popup button {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  line-height: 1;
-  color: var(--ink);
-  position: absolute;
-  top: 6px;
-  right: 8px;
-  cursor: pointer;
-}
+    .card {
+      background: var(--white);
+      border: 1px solid var(--sand);
+      border-radius: 8px;
+      padding: 2rem;
+      position: relative;
+      transition: transform 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
 
+    .stealth .details {
+      filter: blur(4px);
+      transition: filter 0.3s ease;
+    }
+    .stealth:hover .details {
+      filter: blur(0);
+    }
 
-    /* Footer */
+    .about {
+      text-align: center;
+      max-width: 70ch;
+    }
+
+    /* Contact */
+    form {
+      display: grid;
+      gap: 1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    input, textarea, select {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--sand);
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
     footer {
       background: var(--ink);
       color: var(--white);
-      text-align: center;
       padding: 2rem 1rem;
-      font-size: 0.9rem;
+      text-align: center;
     }
 
-    @media (prefers-color-scheme: dark) {
-      body { background: #1b1c17; color: var(--sand); }
-      .feature { background: #2b2d25; }
-      input, textarea { background: #2b2d25; color: var(--sand); border-color: #444; }
+    /* Privacy modal */
+    #privacyModal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    #privacyModal .box {
+      background: var(--white);
+      padding: 2rem;
+      max-width: 600px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-    <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">Ostlii</a>
-      <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Waitlist</a></li>
-      </ul>
+  <header>
+    <h1>Ostlii – Strategic AI Agency & Ecosystem Operator</h1>
+    <p>Building ethical, local‑first AI infrastructure while empowering founders, creators, and investors to thrive together.</p>
+    <div class="cta-group">
+      <a href="#offerings" class="btn btn-primary">Explore What We Build</a>
+      <a href="#contact" class="btn btn-outline">Join the Ostlii Ecosystem</a>
     </div>
-  </nav>
+  </header>
 
-  <section class="hero">
-    <hNo ads. No tracking.<br>Just people, presence, and purpose.
-    <p>Ostlii is the human‑first discovery network that lets you find and share real‑world experiences without sacrificing your privacy or your data.</p>
-    <a href="#contact" class="btn-primary">Join the Waitlist</a>
-  </section>
-
-  <!-- Features -->
-  <section class="features" id="features">
-    <div class="feature">
-      <h3>Real‑Time Map Discovery</h3>
-      <p>Explore live, hyper‑local happenings on an intuitive map—see what’s going on around you right now.</p>
+  <!-- Offerings -->
+  <section id="offerings">
+    <h2>Key Offerings</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Custom AI Agents</h3>
+        <p>Automate content, ops, sales, onboarding &amp; prospecting with human‑first agentic workflows.</p>
+      </div>
+      <div class="card">
+        <h3>Startup Acquisition &amp; Ops</h3>
+        <p>Contract‑based acquisition and operational support for promising, impact‑driven startups.</p>
+      </div>
+      <div class="card">
+        <h3>Investor &amp; Ecosystem Matchmaking</h3>
+        <p>Connecting founders, funds, and functional experts for capital and collaboration.</p>
+      </div>
+      <div class="card stealth">
+        <h3>Ostlii Markets <small>(Private Preview)</small></h3>
+        <p class="details">Experimental AI‑driven negotiation &amp; trading platform for rapid, ethical deal‑making.</p>
+      </div>
+      <div class="card">
+        <h3>AI Print &amp; Design Lab</h3>
+        <p>3PL‑integrated studio: upload → AI‑enhanced branding → auto‑order from local or national vendors.</p>
+      </div>
+      <div class="card stealth">
+        <h3>Proximity Networking Platform</h3>
+        <p class="details">Location‑based discovery + community infrastructure supporting local businesses &amp; events.</p>
+      </div>
     </div>
-    <div class="feature">
-      <h3>Privacy‑First</h3>
-      <p>Your data is <strong>yours</strong>. We never sell it, track you, or serve intrusive ads—ever.</p>
-    </div>
-    <div class="feature">
-      <h3>Business Integration</h3>
-      <p>Local businesses can plug in seamlessly to reach nearby customers who actually want to connect.</p>
-    </div>
-    <div class="feature">
-      <h3>Human‑Centric AI</h3>
-      <p>AI that augments human connection—never manipulates it. Built with transparency and ethics at the core.</p>
-    </div>
-    <div class="feature">
-    <h3>Ekho Spots &amp; Signals</h3>
-    <p>Tap into our mesh network to broadcast and discover hyper‑local moments in real time.</p>
-  </div>
-  <div class="feature">
-    <h3>Agentic Business Tools</h3>
-    <p>Give local businesses autonomous, privacy‑respecting ways to engage nearby customers.</p>
-  </div>
-  <div class="feature">
-    <h3>Digital Pathway to IRL</h3>
-    <p>Turn online intent into offline action with seamless directions and meet‑up prompts.</p>
-  </div>
-  <div class="feature">
-    <h3>Intention‑Based Matching</h3>
-    <p>Connect with people and places that align with what <em>you</em> choose to share—nothing more.</p>
-  </div>
-
   </section>
 
   <!-- About & Values -->
-  <section class="about" id="about">
+  <section id="about">
     <h2>About Us &amp; Our Values</h2>
-    <p>We’re a small, distributed team that lives and breathes agile &amp; scrum. Short iterations, rapid feedback, and a relentless focus on value keep us shipping features that matter.</p>
-    <p>Our mission is simple: put people back in control of their data while unlocking the magic of real‑time, real‑world discovery. We believe technology should empower human connection—not harvest it.</p>
-    <p>Every line of code we write follows three guiding principles:</p>
-    <ul>
-      <li><strong>Human‑First AI:</strong> AI should respect agency, context, and consent.</li>
-      <li><strong>Data Ownership:</strong> Users own their data. Period.</li>
-      <li><strong>Transparent Collaboration:</strong> We build in the open and iterate with our community.</li>
-    </ul>
-    <p>Several of our upcoming projects are currently in legal review. Stay tuned as we navigate the formalities and bring even more groundbreaking features to life.</p>
+    <p class="about">We’re builders, operators, and dreamers who believe AI should augment people—not replace them. Our work is guided by agile/scrum principles, data ownership, and a commitment to privacy. We design real‑world tools that respect human agency and local context.</p>
   </section>
 
   <!-- Coming Soon -->
-  <section class="coming-soon" id="coming-soon">
-    <h2>Coming Soon: Ostlii Data Coin</h2>
-    <p>Imagine earning a stake in the value your data creates. Our blockchain‑powered Data Coin will make that a reality—rewarding you for the insights you choose to share, on your terms.</p>
+  <section id="coming">
+    <h2>Coming Soon</h2>
+    <div class="grid grid-2">
+      <div class="card stealth">
+        <h3>Data Coin</h3>
+        <p class="details">Blockchain‑based token empowering users to own &amp; monetize their data across the Ostlii mesh.</p>
+      </div>
+      <div class="card">
+        <h3>Ostlii Education</h3>
+        <p>Powered by Tawny – Agile/Scrum &amp; AI certification tracks for the next generation of builders.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Contact / Waitlist Form -->
-  <section class="contact" id="contact">
-    <h2 style="text-align:center;margin-bottom:1.5rem;">Get Early Access</h2>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Stay in the Loop</h2>
     <form action="https://formsubmit.co/evanpaulnavarro@outlook.com" method="POST">
-      <input type="hidden" name="_subject" value="New Ostlii Waitlist Sign‑Up" />
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <textarea name="message" rows="4" placeholder="Tell us what excites you about Ostlii (optional)"></textarea>
-      <button type="submit">Join Waitlist</button>
+      <input type="hidden" name="_subject" value="New Ostlii Inquiry" />
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <select name="type" required>
+        <option value="" disabled selected>Select Inquiry Type</option>
+        <option>General Inquiry</option>
+        <option>Submit a Startup</option>
+        <option>Vendor / Investor Interest</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Tell us more..." required></textarea>
+      <button class="btn btn-primary" type="submit">Send</button>
     </form>
-  
-  
-  <!-- Fun notice popup -->
-  <div class="popup" id="noticePopup">
-    <p style="margin:0">We noticed you noticing us 😏<br>
-      <a href="#contact" class="popup-link">Sign up for updates &amp; early beta access</a>
-    </p>
-    <button id="closePopup" aria-label="Close">&times;</button>
-  </div>
-</section>
+    <p style="margin-top:1rem;font-size:0.9rem;text-align:center;">We review every request before confirming meetings to ensure alignment.</p>
+  </section>
 
-  <!-- Footer -->
   <footer>
-    &copy; <span id="year"></span> Ostlii. All rights reserved. &middot; <a href="https://ostlii.com" target="_blank" style="color:var(--sand);">ostlii.com</a>
+    <p>&copy; 2025 Ostlii. All rights reserved.</p>
+    <a href="#" onclick="document.getElementById('privacyModal').style.display='flex';return false;" style="color:var(--gold);text-decoration:none;">How We Handle Your Data</a>
   </footer>
 
-  <script>
-    // Update year automatically
-    document.getElementById('year').textContent = new Date().getFullYear();
-      // playful popup
-  const popup = document.getElementById('noticePopup');
-  const closeBtn = document.getElementById('closePopup');
-  if (popup && closeBtn) {
-    setTimeout(() => popup.style.display = 'block', 4500);
-    closeBtn.addEventListener('click', () => popup.remove());
-  }
+  <!-- Privacy Modal -->
+  <div id="privacyModal">
+    <div class="box">
+      <h3>How We Handle Your Data</h3>
+      <p>We never resell personal data. No cookies or scripts run without your opt‑in. Any AI‑generated content belongs to you unless co‑created under a paid collaboration.</p>
+      <button class="btn btn-outline" onclick="document.getElementById('privacyModal').style.display='none';">Close</button>
+    </div>
+  </div>
 
+  <script>
+    // Close modal on escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('privacyModal').style.display = 'none';
+      }
+    });
   </script>
 </body>
 </html>
