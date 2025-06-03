@@ -194,6 +194,39 @@ textarea:focus {
 ::placeholder {
   color: #888;
 }
+/* Fun notice popup */
+.popup {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--sand);
+  color: var(--ink);
+  padding: 1rem 1.25rem 1rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 260px;
+  font-size: 0.9rem;
+  z-index: 1500;
+  display: none;
+}
+
+.popup a {
+  color: var(--olive);
+  font-weight: 600;
+}
+
+.popup button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--ink);
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  cursor: pointer;
+}
+
 
     /* Footer */
     footer {
@@ -280,7 +313,16 @@ textarea:focus {
       <textarea name="message" rows="4" placeholder="Tell us what excites you about Ostlii (optional)"></textarea>
       <button type="submit">Join Waitlist</button>
     </form>
-  </section>
+  
+  
+  <!-- Fun notice popup -->
+  <div class="popup" id="noticePopup">
+    <p style="margin:0">We noticed you noticing us 😏<br>
+      <a href="#contact" class="popup-link">Sign up for updates &amp; early beta access</a>
+    </p>
+    <button id="closePopup" aria-label="Close">&times;</button>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>
@@ -290,6 +332,14 @@ textarea:focus {
   <script>
     // Update year automatically
     document.getElementById('year').textContent = new Date().getFullYear();
+      // playful popup
+  const popup = document.getElementById('noticePopup');
+  const closeBtn = document.getElementById('closePopup');
+  if (popup && closeBtn) {
+    setTimeout(() => popup.style.display = 'block', 4500);
+    closeBtn.addEventListener('click', () => popup.remove());
+  }
+
   </script>
 </body>
 </html>
