@@ -83,6 +83,26 @@
       color: var(--white);
     }
 
+/* Navigation */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: var(--gold);
+}
+
     section {
       padding: 4rem 1rem;
       max-width: 1200px;
@@ -175,7 +195,16 @@
   </style>
 </head>
 <body>
-  <header>
+  <heade
+      <nav class="main-nav">
+    <ul>
+      <li><a href="#offerings">Offerings</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#coming">Coming Soon</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+r>
     <h1>Ostlii – Strategic AI Agency & Ecosystem Operator</h1>
     <p>Building ethical, local‑first AI infrastructure while empowering founders, creators, and investors to thrive together.</p>
     <div class="cta-group">
