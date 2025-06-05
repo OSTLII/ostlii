@@ -28,3 +28,10 @@ All edits are done directly on the `main` branch. GitHub Pages is configured to 
 > – `image.thum.io`  
 >  
 > If a Shopify URL appears in any browser warning, it’s due to cached DNS, HSTS, or an unrelated tab—**not** this codebase.
+
+## Demo App
+
+The `demo-app/` folder contains a lightweight prototype of the proximity-based
+"Pulse Circles" concept. Open `demo-app/index.html` in any modern browser to
+try the three-lens interface and signal-to-echo flow. It uses Leaflet for the
+map and stores signals in-memory for demonstration purposes.

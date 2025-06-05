@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ostlii Demo App</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="lens-toggle">
+<button data-lens="discover" class="active">Discover</button>
+<button data-lens="social">Social</button>
+<button data-lens="business">Business</button>
+</div>
+<div id="map"></div>
+<div id="controls" class="hidden">
+<input id="signalText" placeholder="Enter signal...">
+<button id="sendSignal">Send Signal</button>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
