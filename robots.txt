@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://ostlii.github.io/ostliis/sitemap.xml
+Sitemap: https://ostlii.com/sitemap.xml
