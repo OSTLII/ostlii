@@ -17,5 +17,8 @@
     </url>
     <url>
         <loc>https://ostlii.com/terms.html</loc>
-    </url></url>/url>
+    </url
+          <url>
+        <loc>https://ostlii.com/codex.html</loc>
+  </url>
 </urlset>
