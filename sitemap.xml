@@ -5,8 +5,17 @@
   </url>
   <url>
         <loc>https://ostlii.com/landing.html</loc>
-  <
+  
         <url>
         <loc>https://ostlii.com/llm-guide.html</loc>
-    </url>/url>
+    
+            <url>
+        <loc>https://ostlii.com/knowledge-hub.html</loc>
+    </url>
+    <url>
+        <loc>https://ostlii.com/privacy.html</loc>
+    </url>
+    <url>
+        <loc>https://ostlii.com/terms.html</loc>
+    </url></url>/url>
 </urlset>
