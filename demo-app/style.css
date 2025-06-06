@@ -1,0 +1,8 @@
+body,html{margin:0;padding:0;height:100%;font-family:sans-serif;}
+#map{height:calc(100% - 60px);}
+#lens-toggle{display:flex;justify-content:center;padding:10px;background:#333;}
+#lens-toggle button{margin:0 5px;padding:8px 12px;color:#fff;background:#555;border:none;cursor:pointer;}
+#lens-toggle button.active{background:#007bff;}
+#controls{position:absolute;top:70px;left:50%;transform:translateX(-50%);background:#fff;padding:10px;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.3);}
+.hidden{display:none;}
+.leaflet-popup-content-wrapper{font-size:14px;}
